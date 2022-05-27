@@ -9,7 +9,7 @@ disableKinds = ["taxonomy", "term"]
 
 [author]
 name = "wuhoo!"
-image = "img/tokyo.webp" # path relative to static directory
+image = "img/author.gif" # path relative to static directory
 
 links = [
   { authentik = { href = "https://auth.wuhoo.xyz", text = "Authentik" } },
