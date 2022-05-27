@@ -1,0 +1,28 @@
+baseURL = "https://wuhoo.xyz/"
+languageCode = "en"
+defaultContentLanguage = "en"
+
+title = "wuhoo!"
+
+enableEmoji = false
+disableKinds = ["taxonomy", "term"]
+
+[author]
+name = "wuhoo!"
+image = "img/tokyo.webp" # path relative to static directory
+
+links = [
+  { authentik = { href = "https://auth.wuhoo.xyz", text = "Authentik" } },
+  { nextcloud = { href = "https://cloud.wuhoo.xyz", text = "Nextcloud" } },
+  { gitlab = { href = "https://gitlab.wuhoo.xyz", text = "GitLab" } },
+  { jellyfin = { href = "https://jellyfin.wuhoo.xyz", text = "Jellyfin" } },
+  { bitwarden = { href = "https://vaultwarden.wuhoo.xyz", text = "Vaultwarden" } },
+  { paperless = { href = "https://paperless.wuhoo.xyz", text = "Paperless" } },
+  { overleaf = { href = "https://overleaf.wuhoo.xyz", text = "Overleaf" } },
+  { privatebin = { href = "https://paste.wuhoo.xyz", icon="", text = "Privatebin"}}
+]
+
+[module]
+[module.hugoVersion]
+extended = false
+min = "0.86.1"

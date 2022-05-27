@@ -1,0 +1,32 @@
+.link-authentik {
+    background: #fd4b2d;
+}
+
+.link-nextcloud {
+    background: #0082c9;
+}
+
+.link-jellyfin {
+    background: #000B25;
+    background: linear-gradient(
+        90deg,
+        #AA5CC3 0%,
+        #00A4DC 100%
+    );
+}
+
+.link-gitlab {
+    background: #fc6d26;
+}
+
+.link-bitwarden {
+    background: #175ddc;
+}
+
+.link-paperless {
+    background: #17541f;
+}
+
+.link-overleaf {
+    background: #47a141;
+}
