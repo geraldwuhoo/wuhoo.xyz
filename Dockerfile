@@ -14,10 +14,9 @@ WORKDIR /site
 
 RUN /hugo --minify --enableGitInfo
 
-FROM docker.io/library/nginx:1.22-alpine
+FROM docker.io/joseluisq/static-web-server:2.9.0
 
-WORKDIR /usr/share/nginx/html/
+ENV SERVER_ROOT=/public
+WORKDIR /public
 
-RUN rm -rf * .??*
-
-COPY --from=build /site/public /usr/share/nginx/html
+COPY --from=build /site/public /public
