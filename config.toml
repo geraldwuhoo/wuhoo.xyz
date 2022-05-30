@@ -17,6 +17,7 @@ links = [
   { gitlab = { href = "https://gitlab.wuhoo.xyz", text = "GitLab" } },
   { jellyfin = { href = "https://jellyfin.wuhoo.xyz", text = "Jellyfin" } },
   { bitwarden = { href = "https://vaultwarden.wuhoo.xyz", text = "Vaultwarden" } },
+  { send = { href = "https://send.wuhoo.xyz", text = "Send" } },
   { privatebin = { href = "https://paste.wuhoo.xyz", icon = "", text = "Privatebin" } },
   { wallabag = { href = "https://wallabag.wuhoo.xyz", icon = "", text = "Wallabag" } },
   { paperless = { href = "https://paperless.wuhoo.xyz", text = "Paperless" } },
