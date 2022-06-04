@@ -22,6 +22,7 @@ links = [
   { wallabag = { href = "https://wallabag.wuhoo.xyz", icon = "", text = "Wallabag" } },
   { paperless = { href = "https://paperless.wuhoo.xyz", text = "Paperless" } },
   { overleaf = { href = "https://overleaf.wuhoo.xyz", text = "Overleaf" } },
+  { uptimekuma = { href = "https://uptime.wuhoo.xyz/status/services", text = "Status" } },
 ]
 
 [module]
