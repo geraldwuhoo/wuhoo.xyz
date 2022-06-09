@@ -1,6 +1,6 @@
 FROM docker.io/library/golang:1.18.3-alpine3.16 AS build
 
-ARG VERSION=0.100.1
+ARG VERSION=0.100.2
 
 WORKDIR /
 ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
