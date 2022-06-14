@@ -1,18 +1,11 @@
-FROM docker.io/library/golang:1.18.3-alpine3.16 AS build
+FROM registry.gitlab.com/pages/hugo:0.100.2 AS build
 
-ARG VERSION=0.100.2
-
-WORKDIR /
-ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
-RUN tar -zxvf hugo.tar.gz && \
-    /hugo version
-
-RUN apk add --no-cache git
+RUN apk add --update --no-cache git go
 
 COPY . /site
 WORKDIR /site
 
-RUN /hugo --minify --enableGitInfo
+RUN hugo --minify --enableGitInfo
 
 FROM docker.io/joseluisq/static-web-server:2.9.0
 
