@@ -1,5 +1,18 @@
 stages:
+  - test
   - build
+
+lint:
+  stage: test
+  image:
+    name: registry.gitlab.com/pages/hugo:0.101.0
+  script:
+    - apk add --update --no-cache git go
+    - hugo --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --ignoreCache --panicOnWarning --printPathWarnings
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
+
 build:
   stage: build
   image:
@@ -14,3 +27,5 @@ build:
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}"
       --destination "${CI_REGISTRY_IMAGE}:latest"
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
