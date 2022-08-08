@@ -14,7 +14,7 @@ image = "img/author.webp" # path relative to static directory
 links = [
   { authentik = { href = "https://auth.wuhoo.xyz", text = "Authentik" } },
   { nextcloud = { href = "https://cloud.wuhoo.xyz", text = "Nextcloud" } },
-  { gitlab = { href = "https://gitlab.wuhoo.xyz", text = "GitLab" } },
+  { gitlab = { href = "https://gitlab.wuhoo.xyz/explore/", text = "GitLab" } },
   { jellyfin = { href = "https://jellyfin.wuhoo.xyz", text = "Jellyfin" } },
   { bitwarden = { href = "https://vaultwarden.wuhoo.xyz", text = "Vaultwarden" } },
   { send = { href = "https://send.wuhoo.xyz", text = "Send" } },
