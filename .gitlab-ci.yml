@@ -38,7 +38,7 @@ build:
       --build-arg "CI_PIPELINE_URL"
       --cache=true
       --cache-repo "${CI_REGISTRY_IMAGE}/build-cache"
-      --cache-ttl 720h0m0s
+      --cache-ttl 168h0m0s
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination=image
