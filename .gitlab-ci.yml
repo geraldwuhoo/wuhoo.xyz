@@ -9,7 +9,7 @@ variables:
 lint:
   stage: test
   image:
-    name: registry.gitlab.com/pages/hugo:0.104.0
+    name: registry.gitlab.com/pages/hugo:0.104.1
   script:
     - apk add --update --no-cache git go
     - hugo --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --ignoreCache --panicOnWarning --printPathWarnings
@@ -20,7 +20,7 @@ lint:
 build:
   stage: build
   image:
-    name: gcr.io/kaniko-project/executor:v1.9.0-debug
+    name: gcr.io/kaniko-project/executor:v1.9.1-debug
     entrypoint: [""]
   before_script:
     - mkdir -p /kaniko/.docker
