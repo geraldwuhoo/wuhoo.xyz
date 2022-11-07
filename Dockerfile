@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/pages/hugo:0.104.3 AS build
+FROM registry.gitlab.com/pages/hugo:0.105.0 AS build
 
 RUN apk add --update --no-cache git go
 
