@@ -7,7 +7,7 @@ WORKDIR /site
 
 RUN hugo --minify --enableGitInfo
 
-FROM docker.io/joseluisq/static-web-server:2.14.0
+FROM docker.io/joseluisq/static-web-server:2.14.2
 
 ENV SERVER_ROOT=/public
 WORKDIR /public
