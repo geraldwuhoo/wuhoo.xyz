@@ -9,7 +9,7 @@ variables:
 lint:
   stage: test
   image:
-    name: registry.gitlab.com/pages/hugo:0.107.0
+    name: registry.gitlab.com/pages/hugo:0.109.0
   script:
     - apk add --update --no-cache git go
     - hugo --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --ignoreCache --panicOnWarning --printPathWarnings
@@ -54,7 +54,7 @@ build:
 push:
   stage: push
   image:
-    name: gcr.io/go-containerregistry/crane/debug:v0.12.1
+    name: gcr.io/go-containerregistry/crane/debug:v0.13.0
     entrypoint: [""]
   script:
     - crane auth login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
