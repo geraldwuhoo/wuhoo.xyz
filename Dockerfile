@@ -1,4 +1,4 @@
-FROM registry.gitlab.com/pages/hugo:0.109.0 AS build
+FROM registry.gitlab.com/pages/hugo:0.111.3 AS build
 
 RUN apk add --update --no-cache git go
 
@@ -7,7 +7,7 @@ WORKDIR /site
 
 RUN hugo --minify --enableGitInfo
 
-FROM docker.io/joseluisq/static-web-server:2.14.2
+FROM docker.io/joseluisq/static-web-server:2.15.0
 
 ENV SERVER_ROOT=/public
 WORKDIR /public

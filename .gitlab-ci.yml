@@ -9,7 +9,7 @@ variables:
 lint:
   stage: test
   image:
-    name: registry.gitlab.com/pages/hugo:0.109.0
+    name: registry.gitlab.com/pages/hugo:0.111.3
   script:
     - apk add --update --no-cache git go
     - hugo --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --ignoreCache --panicOnWarning --printPathWarnings
@@ -20,7 +20,7 @@ lint:
 build:
   stage: build
   image:
-    name: gcr.io/kaniko-project/executor:v1.9.1-debug
+    name: gcr.io/kaniko-project/executor:v1.9.2-debug
     entrypoint: [""]
   before_script:
     - mkdir -p /kaniko/.docker
@@ -54,7 +54,7 @@ build:
 push:
   stage: push
   image:
-    name: gcr.io/go-containerregistry/crane/debug:v0.13.0
+    name: gcr.io/go-containerregistry/crane/debug:v0.14.0
     entrypoint: [""]
   script:
     - crane auth login -u ${CI_REGISTRY_USER} -p ${CI_REGISTRY_PASSWORD} ${CI_REGISTRY}
