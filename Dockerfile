@@ -7,9 +7,13 @@ WORKDIR /site
 
 RUN hugo --minify --enableGitInfo
 
-FROM docker.io/joseluisq/static-web-server:2.15.0
+FROM docker.io/p3terx/darkhttpd:1.14
 
 ENV SERVER_ROOT=/public
 WORKDIR /public
 
 COPY --from=build /site/public /public
+
+EXPOSE 80
+
+CMD ["/public"]
