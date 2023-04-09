@@ -9,7 +9,6 @@ RUN hugo --minify --enableGitInfo
 
 FROM docker.io/p3terx/darkhttpd:1.14
 
-ENV SERVER_ROOT=/public
 WORKDIR /public
 
 COPY --from=build /site/public /public
