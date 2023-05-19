@@ -19,7 +19,6 @@ links = [
   { bitwarden = { href = "https://vaultwarden.wuhoo.xyz", text = "Vaultwarden" } },
   { send = { href = "https://send.wuhoo.xyz", text = "Send" } },
   { privatebin = { href = "https://paste.wuhoo.xyz", icon = "", text = "Privatebin" } },
-  { wallabag = { href = "https://wallabag.wuhoo.xyz", icon = "", text = "Wallabag" } },
   { uptimekuma = { href = "https://uptime.wuhoo.xyz/status/services", text = "Status" } },
   { homer = { href = "https://homer.wuhoo.xyz", text = "More" } },
 ]
