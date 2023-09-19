@@ -9,7 +9,7 @@ variables:
 lint:
   stage: test
   image:
-    name: registry.gitlab.com/pages/hugo:0.111.3
+    name: registry.gitlab.com/pages/hugo:0.118.2
   script:
     - apk add --update --no-cache git go
     - hugo --buildDrafts --buildExpired --buildFuture --cleanDestinationDir --ignoreCache --panicOnWarning --printPathWarnings
