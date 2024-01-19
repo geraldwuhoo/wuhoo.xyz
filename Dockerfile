@@ -7,7 +7,7 @@ WORKDIR /site
 
 RUN hugo --minify --enableGitInfo
 
-FROM docker.io/p3terx/darkhttpd:1.14
+FROM docker.io/p3terx/darkhttpd:1.15
 
 WORKDIR /public
 
