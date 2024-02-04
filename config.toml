@@ -20,7 +20,7 @@ links = [
   { send = { href = "https://send.wuhoo.xyz", text = "Send" } },
   { privatebin = { href = "https://paste.wuhoo.xyz", icon = "", text = "Privatebin" } },
   { uptimekuma = { href = "https://uptime.wuhoo.xyz/status/services", text = "Status" } },
-  { homer = { href = "https://homer.wuhoo.xyz", text = "More" } },
+  { adbir = { href = "https://adbir.wuhoo.xyz", text = "More" } },
 ]
 
 [module]
